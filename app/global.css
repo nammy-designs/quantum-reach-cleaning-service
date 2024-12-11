@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* colors */
+  --white: #ffffff;
+  --black: #000000;
+  --orange-shade: #fba311;
+  --purple-shade: #09042d;
+  --grey-shade: #565656;
+  --purple: #001837;
+  --light-grey-shade: #f0f2f4;
+  --light-blue: #abc6e9;
+
+  /* font sizes */
+  --base-size: 14px;
+  --md-size: 22px;
+  --lg-size: 30px;
+  --xl-size: 38px;
+  --xxl-size: 46px;
+
+  /* spacings */
+  --space-5: 5px;
+  --space-10: 10px;
+  --space-15: 15px;
+  --space-20: 20px;
+  --space-25: 25px;
+  --space-30: 30px;
+  --space-35: 35px;
+  --space-40: 40px;
+  --space-45: 45px;
+  --space-50: 50px;
+  --space-55: 55px;
+  --space-60: 60px;
+}
+
+html,
+body {
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+  font-family: var(--quick-sand), var(--open-sans), var(--roboto), "sans-serif";
+  background-color: var(--white);
+  overflow: hidden auto;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+@layer utilities {
+  .stroke-styles {
+    -webkit-text-stroke: 2px var(--purple);
+    text-stroke: 2px var(--purple); /* Fallback for other browsers */
+  }
+
+  .open-sans {
+    font-family: var(--open-sans);
+  }
+}
