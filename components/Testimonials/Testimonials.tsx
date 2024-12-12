@@ -1,3 +1,5 @@
+"use client";
+
 import HeadingWidget from "@/components/SharedComponents/HeadingWidget";
 import Image from "next/image";
 

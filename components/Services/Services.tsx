@@ -1,3 +1,5 @@
+"use client";
+
 import { services } from "@/data/services";
 import Card from "@/components/Card/Card";
 import HeadingWidget from "@/components/SharedComponents/HeadingWidget";

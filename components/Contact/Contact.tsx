@@ -1,3 +1,5 @@
+"use client";
+
 import HeadingWidget from "@/components/SharedComponents/HeadingWidget";
 
 const ContactUs = () => {

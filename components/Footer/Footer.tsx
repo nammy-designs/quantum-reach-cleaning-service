@@ -1,3 +1,5 @@
+"use client";
+
 import { menuItems } from "@/app/constants/navigation";
 
 const Footer = () => {
