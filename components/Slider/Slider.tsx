@@ -122,6 +122,8 @@ const Slider = () => {
                     alt="demo"
                     className="w-full h-full max-w-full block absolute object-cover"
                     fill={true}
+                    loading="eager"
+                    priority={false}
                   />
                   <div className="img-title relative p-9 flex items-center justify-center">
                     <div className="w-full p-8 lg:max-w-[45%] 2xl:max-w-[65%]">

@@ -80,11 +80,12 @@ const ContactUs = () => {
                   <div className="w-full px-3">
                     <label
                       className="block capitalize mb-2 text-fluid-micro-lg leading-fluid-micro-lg font-semibold text-purple"
-                      htmlFor="grid-password"
+                      htmlFor="grid-message"
                     >
                       Your Message
                     </label>
                     <textarea
+                      id="grid-message"
                       rows={5}
                       className="appearance-none block w-full border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     ></textarea>

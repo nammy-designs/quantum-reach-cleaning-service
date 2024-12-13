@@ -4,12 +4,12 @@ import { menuItems } from "@/app/constants/navigation";
 
 const Footer = () => {
   return (
-    <div className="3xl:container mx-auto text-light-blue xl:px-8 relative overflow-y-hidden">
+    <footer className="3xl:container mx-auto text-light-blue xl:px-8 relative overflow-y-hidden">
       <section
         id="footer-section"
         className="relative overflow-hidden xl:rounded-[30px]"
       >
-        <footer
+        <div
           id="footer-section"
           className="relative text-fluid-base leading-fluid-base bg-purple border border-t-8 border-t-orange-shade px-8 pt-8 [&_.widget-menu-item]:font-semibold [&_.widget-menu-item]:pb-3 [&_.widget-menu-item]:leading-5 3xl:pt-14"
         >
@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="widget-row grid grid-cols-1 [&>.widget-col]:pb-8 xl:grid-cols-3 xl:gap-5">
               <div className="widget-col">
                 <div className="nav-menu-2 widget">
-                  <aside className="nav-menu">
+                  <div className="nav-menu">
                     <h2 className="widget-title font-bold tracking-normal text-white capitalize mb-8">
                       useful link
                     </h2>
@@ -37,12 +37,12 @@ const Footer = () => {
                         })}
                       </ul>
                     </div>
-                  </aside>
+                  </div>
                 </div>
               </div>
               <div className="widget-col">
                 <div className="nav-menu-2 widget">
-                  <aside className="nav-menu">
+                  <div className="nav-menu">
                     <h2 className="widget-title font-bold tracking-normal text-white capitalize mb-8">
                       working time
                     </h2>
@@ -71,12 +71,12 @@ const Footer = () => {
                         </li>
                       </ul>
                     </div>
-                  </aside>
+                  </div>
                 </div>
               </div>
               <div className="widget-col">
                 <div className="nav-menu-2 widget">
-                  <aside className="nav-menu">
+                  <div className="nav-menu">
                     <h2 className="widget-title font-bold tracking-normal text-white capitalize mb-8">
                       say hello
                     </h2>
@@ -92,7 +92,7 @@ const Footer = () => {
                         </li>
                       </ul>
                     </div>
-                  </aside>
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,9 +106,9 @@ const Footer = () => {
               , All Rights Reserved.
             </div>
           </div>
-        </footer>
+        </div>
       </section>
-    </div>
+    </footer>
   );
 };
 

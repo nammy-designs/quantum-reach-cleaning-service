@@ -102,12 +102,12 @@ const WhyChooseUs = () => {
           3xl:grid-cols-4 3xl:gap-8"
           >
             <div className="widget-container text-purple">
-              <h4 className={`font-extrabold text-fluid-h1 leading-fluid-h1`}>
+              <p className={`font-extrabold text-fluid-h1 leading-fluid-h1`}>
                 <span className="open-sans text-transparent stroke-styles relative">
                   250
                 </span>
                 <span className="open-sans ml-3">+</span>
-              </h4>
+              </p>
               <div className="description">
                 <p className="font-medium text-fluid-body-5 leading-fluid-body-5">
                   Professional and Experienced staff ready to help you anytime.
@@ -116,12 +116,12 @@ const WhyChooseUs = () => {
             </div>
 
             <div className="widget-container text-purple">
-              <h4 className={`font-extrabold text-fluid-h1 leading-fluid-h1`}>
+              <p className={`font-extrabold text-fluid-h1 leading-fluid-h1`}>
                 <span className="open-sans text-transparent stroke-styles relative">
                   14
                 </span>
                 <span className="open-sans ml-3">m</span>
-              </h4>
+              </p>
               <div className="description">
                 <p className="font-medium text-fluid-body-5 leading-fluid-body-5">
                   Proving all type of cleaning solutions every small and big
@@ -131,12 +131,12 @@ const WhyChooseUs = () => {
             </div>
 
             <div className="widget-container text-purple">
-              <h4 className={`font-extrabold text-fluid-h1 leading-fluid-h1`}>
+              <p className={`font-extrabold text-fluid-h1 leading-fluid-h1`}>
                 <span className="open-sans text-transparent stroke-styles relative">
                   460
                 </span>
                 <span className="open-sans ml-3">m</span>
-              </h4>
+              </p>
               <div className="description">
                 <p className="font-medium text-fluid-body-5 leading-fluid-body-5">
                   We start with a thorough detail clean throughout your house.
@@ -145,12 +145,12 @@ const WhyChooseUs = () => {
             </div>
 
             <div className="widget-container text-purple">
-              <h4 className={`font-extrabold text-fluid-h1 leading-fluid-h1`}>
+              <p className={`font-extrabold text-fluid-h1 leading-fluid-h1`}>
                 <span className="open-sans text-transparent stroke-styles relative">
                   30
                 </span>
                 <span className="open-sans ml-3">k</span>
-              </h4>
+              </p>
               <div className="description">
                 <p className="font-medium text-fluid-body-5 leading-fluid-body-5">
                   We hold a successful track record of satisfying our customers.

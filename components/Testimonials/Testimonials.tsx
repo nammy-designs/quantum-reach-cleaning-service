@@ -34,9 +34,9 @@ const Testimonials = () => {
                           />
                         </div>
                         <div className="flex-grow pl-3">
-                          <h6 className="font-bold uppercase text-fluid-base leading-fluid-base">
+                          <p className="font-bold uppercase text-fluid-base leading-fluid-base">
                             Kenzie Edgar.
-                          </h6>
+                          </p>
                         </div>
                       </div>
                       <div className="w-full">
