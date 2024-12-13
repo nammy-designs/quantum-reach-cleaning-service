@@ -13,8 +13,22 @@ const ContactUs = () => {
               description={"contact us for any query"}
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-12 text-purple">
-              <form className="md:col-span-12 p-10">
+            <div className="grid grid-cols-1 md:grid-cols-12 md:gap-5 text-purple 2xl:p-10">
+              <div className="md:col-span-4 rounded-xl relative overflow-hidden mb-5 2xl:mb-0">
+                <p className="text-fluid-body-1 leading-fluid-body-1 font-semibold">
+                  Get In Touch
+                </p>
+                <p className="text-fluid-micro-lg mt-2 leading-fluid-micro-lg font-semibold">
+                  Mobile: +1 888 898 888 888
+                </p>
+                <p className="text-fluid-micro-lg mt-2 leading-fluid-micro-lg font-semibold">
+                  Email: info@yourdomain.com
+                </p>
+                <p className="text-fluid-micro-lg mt-2 leading-fluid-micro-lg font-semibold">
+                  Address: address details here
+                </p>
+              </div>
+              <form className="md:col-span-8">
                 <div className="flex flex-wrap -mx-3 mb-6">
                   <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                     <label
@@ -24,7 +38,7 @@ const ContactUs = () => {
                       First Name
                     </label>
                     <input
-                      className="w-full bg-transparent placeholder:text-slate-400 text-purple text-sm border border-slate-200 rounded-md px-3 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                      className="w-full bg-transparent placeholder:text-slate-400 text-purple text-sm border border-grey-shade rounded-md px-3 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
                       id="grid-first-name"
                       type="text"
                       placeholder="Enter First Name"
@@ -38,7 +52,7 @@ const ContactUs = () => {
                       Last Name
                     </label>
                     <input
-                      className="w-full bg-transparent placeholder:text-slate-400 text-purple text-sm border border-slate-200 rounded-md px-3 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                      className="w-full bg-transparent placeholder:text-slate-400 text-purple text-sm border border-grey-shade rounded-md px-3 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
                       id="grid-last-name"
                       type="text"
                       placeholder="Enter Last Name"
@@ -52,7 +66,7 @@ const ContactUs = () => {
                       Mobile Number
                     </label>
                     <input
-                      className="w-full bg-transparent placeholder:text-slate-400 text-purple text-sm border border-slate-200 rounded-md px-3 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                      className="w-full bg-transparent placeholder:text-slate-400 text-purple text-sm border border-grey-shade rounded-md px-3 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
                       id="grid-mobile-number"
                       type="number"
                       placeholder="Enter Mobile Number"
@@ -68,7 +82,7 @@ const ContactUs = () => {
                       Email Address
                     </label>
                     <input
-                      className="w-full bg-transparent placeholder:text-slate-400 text-purple text-sm border border-slate-200 rounded-md px-3 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                      className="w-full bg-transparent placeholder:text-slate-400 text-purple text-sm border border-grey-shade rounded-md px-3 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
                       id="grid-email"
                       type="email"
                       placeholder="Enter Email Address"
@@ -87,7 +101,7 @@ const ContactUs = () => {
                     <textarea
                       id="grid-message"
                       rows={5}
-                      className="appearance-none block w-full border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      className="appearance-none block w-full border border-grey-shade rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     ></textarea>
                   </div>
                   <div className="flex justify-between w-full px-3 mt-5">
