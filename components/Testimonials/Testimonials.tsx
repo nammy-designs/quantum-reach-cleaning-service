@@ -20,7 +20,7 @@ const Testimonials = () => {
             />
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-2">
               {/* section to add sliders for testimonials */}
-              {testimonials.map(({ name, description }, idx) => {
+              {testimonials.map(({ name, description, imgUrl }, idx) => {
                 return (
                   <div className="px-3 w-full" key={idx}>
                     <div className="w-full mx-auto rounded-lg bg-white border border-purple p-5 text-gray-800 font-light mb-6">
@@ -29,7 +29,7 @@ const Testimonials = () => {
                           <Image
                             width={40}
                             height={40}
-                            src="https://i.pravatar.cc/100?img=1"
+                            src={imgUrl}
                             alt=""
                             className="object-cover"
                           />
