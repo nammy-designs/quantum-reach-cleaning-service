@@ -15,7 +15,8 @@ const slides: Array<Slide> = [
   {
     id: 1,
     title: "residential cleaning",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "Experience a spotless home or office with our expert cleaning services. Your satisfaction is our priority!",
     imgUrl: slide1,
     iconName: "menWithCleaner",
   },
@@ -23,7 +24,7 @@ const slides: Array<Slide> = [
     id: 2,
     title: "Office Cleaning",
     description:
-      "minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      "We use safe, eco-friendly products to ensure a clean environment for you and your loved ones.. ",
     imgUrl: slide2,
     iconName: "mop",
   },

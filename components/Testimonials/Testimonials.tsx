@@ -1,6 +1,7 @@
 "use client";
 
 import HeadingWidget from "@/components/SharedComponents/HeadingWidget";
+import { testimonials } from "@/data/testimonials";
 import Image from "next/image";
 
 const Testimonials = () => {
@@ -19,7 +20,7 @@ const Testimonials = () => {
             />
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-2">
               {/* section to add sliders for testimonials */}
-              {Array.from({ length: 5 }).map((_, idx) => {
+              {testimonials.map(({ name, description }, idx) => {
                 return (
                   <div className="px-3 w-full" key={idx}>
                     <div className="w-full mx-auto rounded-lg bg-white border border-purple p-5 text-gray-800 font-light mb-6">
@@ -35,7 +36,7 @@ const Testimonials = () => {
                         </div>
                         <div className="flex-grow pl-3">
                           <p className="font-bold uppercase text-fluid-base leading-fluid-base">
-                            Kenzie Edgar.
+                            {name}
                           </p>
                         </div>
                       </div>
@@ -44,11 +45,7 @@ const Testimonials = () => {
                           <span className="text-lg leading-none italic text-purple mr-1">
                             &quot;
                           </span>
-                          {`Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Quos sunt ratione dolor exercitationem minima
-                          quas itaque saepe quasi architecto vel! Accusantium,
-                          vero sint recusandae cum tempora nemo commodi soluta
-                          deleniti.`}
+                          {description}
                           <span className="text-lg leading-none italic ml-1">
                             &quot;
                           </span>
