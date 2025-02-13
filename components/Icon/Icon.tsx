@@ -15,6 +15,7 @@ import { ReactComponent as BroomFillSvg } from "@/assets/icons/broom-fill.svg";
 import { ReactComponent as MenuSvg } from "@/assets/icons/menu.svg";
 import { ReactComponent as CrossSvg } from "@/assets/icons/cross.svg";
 import { ReactComponent as ArrowSvg } from "@/assets/icons/right-arrow.svg";
+import { ReactComponent as ServicePackageSvg } from "@/assets/icons/service-package.svg";
 
 type IconSvgComponent = React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 
@@ -34,6 +35,7 @@ type IconType = {
   menu: IconSvgComponent;
   cross: IconSvgComponent;
   arrow: IconSvgComponent;
+  servicePackage: IconSvgComponent;
 };
 
 // Mapping SVG component to Icon
@@ -53,6 +55,7 @@ export const ICON_MAPPING: IconType = {
   menu: MenuSvg,
   cross: CrossSvg,
   arrow: ArrowSvg,
+  servicePackage: ServicePackageSvg,
 };
 
 export type IconTypeProp =
@@ -70,7 +73,8 @@ export type IconTypeProp =
   | "broomFill"
   | "menu"
   | "cross"
-  | "arrow";
+  | "arrow"
+  | "servicePackage";
 
 export type IconSizes =
   | 8

@@ -10,22 +10,23 @@ const ContactUs = () => {
           <div className="services-container">
             <HeadingWidget
               title={"Contact us"}
-              description={"contact us for any query"}
+              description={"Get in touch for a free quote"}
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-12 md:gap-5 text-purple 2xl:p-10">
+            <div className="grid grid-cols-1 md:grid-cols-12 md:gap-5 text-purple">
               <div className="md:col-span-4 rounded-xl relative overflow-hidden mb-5 2xl:mb-0">
                 <p className="text-fluid-body-1 leading-fluid-body-1 font-semibold">
                   Get In Touch
                 </p>
                 <p className="text-fluid-micro-lg mt-2 leading-fluid-micro-lg font-semibold">
-                  Mobile: +1 888 898 888 888
+                  We provide cleaning service across Abbotsford, Surrey,
+                  Langley, Mission and Chilliwack.
                 </p>
                 <p className="text-fluid-micro-lg mt-2 leading-fluid-micro-lg font-semibold">
-                  Email: info@yourdomain.com
+                  Mobile: +1 (604) 751 6260
                 </p>
                 <p className="text-fluid-micro-lg mt-2 leading-fluid-micro-lg font-semibold">
-                  Address: address details here
+                  Email: hello@domain.com
                 </p>
               </div>
               <form className="md:col-span-8">
@@ -44,7 +45,7 @@ const ContactUs = () => {
                       placeholder="Enter First Name"
                     />
                   </div>
-                  <div className="w-full md:w-1/3 px-3">
+                  <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                     <label
                       className="block capitalize mb-2 text-fluid-micro-lg leading-fluid-micro-lg font-semibold text-purple"
                       htmlFor="grid-last-name"
@@ -101,7 +102,7 @@ const ContactUs = () => {
                     <textarea
                       id="grid-message"
                       rows={5}
-                      className="appearance-none block w-full border border-grey-shade rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      className="appearance-none block w-full border border-grey-shade rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-fluid-micro-lg"
                     ></textarea>
                   </div>
                   <div className="flex justify-between w-full px-3 mt-5">

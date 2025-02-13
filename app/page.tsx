@@ -9,9 +9,16 @@ import Slider from "@/components/Slider/Slider";
 import ContactUs from "@/components/Contact/Contact";
 
 export const metadata: Metadata = {
-  title: "Organization Name",
-  description: "Organization Description",
-  icons: "/",
+  title: "Honourable Cleaning Service",
+  description: "",
+  icons: {
+    icon: [
+      {
+        url: "/assets/images/brand-logo.png",
+        type: "image/png",
+      },
+    ],
+  },
 };
 
 async function Home() {

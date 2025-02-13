@@ -2,7 +2,6 @@
 
 import HeadingWidget from "@/components/SharedComponents/HeadingWidget";
 import { testimonials } from "@/data/testimonials";
-import Image from "next/image";
 
 const Testimonials = () => {
   return (
@@ -18,22 +17,13 @@ const Testimonials = () => {
               title={"testimonials"}
               description={"what our customers says about us"}
             />
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-2">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-8">
               {/* section to add sliders for testimonials */}
-              {testimonials.map(({ name, description, imgUrl }, idx) => {
+              {testimonials.map(({ name, description }, idx) => {
                 return (
-                  <div className="px-3 w-full" key={idx}>
-                    <div className="w-full mx-auto rounded-lg bg-white border border-purple p-5 text-gray-800 font-light mb-6">
+                  <div className="w-full" key={idx}>
+                    <div className="w-full mx-auto rounded-lg bg-white border border-purple p-5 text-gray-800 font-light mb-6 h-full">
                       <div className="w-full flex mb-4 items-center">
-                        <div className="overflow-hidden rounded-full w-10 h-10 border border-purple">
-                          <Image
-                            width={40}
-                            height={40}
-                            src={imgUrl}
-                            alt=""
-                            className="object-cover"
-                          />
-                        </div>
                         <div className="flex-grow pl-3">
                           <p className="font-bold uppercase text-fluid-base leading-fluid-base">
                             {name}

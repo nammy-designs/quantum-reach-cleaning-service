@@ -1,45 +1,38 @@
 type Testimonial = {
   name: string;
   description: string;
-  imgUrl: string;
 };
 
 const testimonials: Array<Testimonial> = [
   {
-    name: "Sarah Johnson",
+    name: "Mike Gill",
     description:
-      "I couldn’t be happier with the service! The team was punctual, professional, and left my home spotless. I highly recommend them for anyone looking for reliable cleaners.",
-    imgUrl: "https://i.pravatar.cc/100?img=1",
+      "Highly Recommend Honourable Cleaning Services!! I'm thrilled to give this cleaning company a well-deserved 5-star review! I can't express how delighted I am with this budget-friendly cleaning company. Despite their affordable rates, their attention to detail and thoroughness in cleaning are truly impressive. I've used their services multiple times, and each time, homes/properties look and feel rejuvenated. Their friendly staff and reliable service have made them my go-to choice. If you're looking for quality cleaning without breaking the bank, look no further- this company is a hidden gem!",
   },
   {
-    name: "David Brown",
+    name: "Hannah Vandenberg-Clark",
     description:
-      "Our office has never looked better! The cleaning crew pays attention to every detail, and the eco-friendly products they use are a huge plus. Fantastic service!",
-    imgUrl: "https://i.pravatar.cc/100?img=5",
+      "When I needed an emergency cleaning, I called many places with varying wait times and prices. This cleaning crew came quickly, did an excellent job and still charged an extremely reasonable rate. Both ladies were very kind and hard working. I cannot say enough good things about them. Would and will be recommending them to anyone in need of a cleaning service.",
   },
   {
-    name: "Emily Carter",
+    name: "Maneeha A",
     description:
-      "The carpet cleaning service was amazing! They removed stains I thought were permanent, and my carpets look and feel brand new. Great job!",
-    imgUrl: "https://i.pravatar.cc/100?img=8",
+      "I had the pleasure of getting my house cleaned by these wonderful ladies! They were very accommodating and respectful! All my questions were answered in a timely manner. My house looked amazing and the cleaning was done thoroughly and quickly! Thank you so much and I will be getting their services from now on!",
   },
   {
-    name: "Michael Lee",
+    name: "Cathy Gill",
     description:
-      "Their pressure cleaning service completely transformed our driveway and patio. The results were beyond my expectations. Highly recommended!",
-    imgUrl: "https://i.pravatar.cc/100?img=10",
+      "They did a fantastic job with a move out clean. Above and beyond expectations! I will definitely use them again in the future. Highly recommend!",
   },
   {
-    name: "Linda Thompson",
+    name: "Kellyann",
     description:
-      "I booked a deep cleaning for my home, and they exceeded all expectations. The team was thorough, friendly, and left everything sparkling clean.",
-    imgUrl: "https://i.pravatar.cc/100?img=15",
+      "What a wonderful job and team at Honourable Cleaning!! I had the privilege to have them clean my house yesterday and they did such a fantastic job and service. They cleaned in detail and took their time and very reasonable in price. I would highly recommend Honourable Cleaning!!",
   },
   {
-    name: "Robert Davis",
+    name: "Sahil Sidhu",
     description:
-      "Our windows look incredible after their cleaning service! The crew was professional, and I love that they used eco-friendly products. Will definitely book again.",
-    imgUrl: "https://i.pravatar.cc/100?img=21",
+      "Great quality work. Helped me clean a home for a real estate listing in Abbotsford. Did a very impressive job, will be using again.",
   },
 ];
 

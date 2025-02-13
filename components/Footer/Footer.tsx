@@ -1,6 +1,7 @@
 "use client";
 
 import { menuItems } from "@/app/constants/navigation";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -29,46 +30,15 @@ const Footer = () => {
                               className="nav-menu-item w-[50%] widget-menu-item text-light-blue"
                               key={index}
                             >
-                              <a href="#" className="no-underline capitalize">
+                              <Link
+                                href={menuItem.href}
+                                className="no-underline capitalize"
+                              >
                                 <span>{menuItem.label}</span>
-                              </a>
+                              </Link>
                             </li>
                           );
                         })}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="widget-col">
-                <div className="nav-menu-2 widget">
-                  <div className="nav-menu">
-                    <h2 className="widget-title font-bold tracking-normal text-white capitalize mb-8">
-                      working time
-                    </h2>
-                    <div className="nav-link-container">
-                      <ul className="list-items-container">
-                        <li className="nav-menu-item widget-menu-item">
-                          <span className="time-title">
-                            Mon - Fri: 9.00am - 5.00pm
-                          </span>
-                        </li>
-
-                        <li className="nav-menu-item widget-menu-item">
-                          <span className="time-title">
-                            Mon - Fri: 9.00am - 5.00pm
-                          </span>
-                        </li>
-
-                        <li className="nav-menu-item widget-menu-item">
-                          <span className="time-title">
-                            Sat: 9.00am - 5.00pm
-                          </span>
-                        </li>
-
-                        <li className="nav-menu-item widget-menu-item">
-                          <span className="time-title">Sunday Closed</span>
-                        </li>
                       </ul>
                     </div>
                   </div>
@@ -83,12 +53,10 @@ const Footer = () => {
                     <div className="nav-link-container">
                       <ul className="list-items-container">
                         <li className="nav-menu-item widget-menu-item">
-                          <span className="time-title">+1 888 898 888 888</span>
+                          <span className="time-title">+1 (604) 751 6260</span>
                         </li>
                         <li className="nav-menu-item widget-menu-item">
-                          <span className="time-title">
-                            info@yourdomain.com
-                          </span>
+                          <span className="time-title">hello@domain.com</span>
                         </li>
                       </ul>
                     </div>
@@ -99,9 +67,9 @@ const Footer = () => {
           </div>
           <div className="footer-copyright flex justify-center mt-16">
             <div className="footer-copyright-text-area bg-white px-9 py-5 w-full text-purple font-semibold text-center xl:max-w-[75%] rounded-t-2xl xl:rounded-t-3xl">
-              Copyright © 2024{" "}
+              Copyright © {new Date().getFullYear()}{" "}
               <a href="#" className="text-inherit">
-                Organization Name
+                Honourable Cleaning Service
               </a>
               , All Rights Reserved.
             </div>

@@ -4,7 +4,6 @@ import Lottie from "lottie-react";
 import Icon from "../Icon/Icon";
 import HeadingWidget from "@/components/SharedComponents/HeadingWidget";
 import cleaningJson from "@/assets/animations/cleaning.json";
-import Link from "next/link";
 
 const WhyChooseUs = () => {
   return (
@@ -52,39 +51,67 @@ const WhyChooseUs = () => {
                     </div>
                     <div>
                       <h2 className="font-bold mb-1 text-fluid-body-2-guided leading-fluid-body-2-guided">
-                        Full Security
+                        Contact Us
                       </h2>
                       <div className="heading-des">
                         <p className="text-purple tracking-normal text-fluid-micro-guided leading-fluid-micro-guided">
-                          {`We are proving all type of cleaning solutions for every small and big businesses`}
+                          {`Reach out via phone or our website to get started.`}
                         </p>
                       </div>
                     </div>
                   </div>
+
                   <div className="text-purple flex gap-4">
                     <div className="p-6 bg-light-grey-shade rounded-3xl flex self-start">
                       <Icon icon="clock" size={32} className="fill-purple" />
                     </div>
                     <div>
                       <h2 className="font-bold mb-1 capitalize text-fluid-body-2-guided leading-fluid-body-2-guided">
-                        Always in time
+                        Book An Appointment
                       </h2>
                       <div className="heading-des">
                         <p className="text-purple text-base tracking-normal text-fluid-micro-guided leading-fluid-micro-guided">
-                          {`We are proving all type of cleaning solutions for every small and big businesses`}
+                          {`Choose a convenient date and time for your cleaning service.`}
                         </p>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="action-container w-full lg:w-1/2 lg:mt-7 text-center">
-                  <Link
-                    href={"#contact"}
-                    className="px-3 py-5 border border-b-purple text-purple block capitalize font-semibold rounded-md text-fluid-micro-lg leading-fluid-micro-lg transition-all duration-300 hover:bg-purple hover:text-white"
-                  >
-                    <p>request for a callback</p>
-                  </Link>
+                  <div className="text-purple flex gap-4">
+                    <div className="p-6 bg-light-grey-shade rounded-3xl flex self-start">
+                      <Icon
+                        icon="servicePackage"
+                        size={32}
+                        className="fill-purple"
+                      />
+                    </div>
+                    <div>
+                      <h2 className="font-bold mb-1 capitalize text-fluid-body-2-guided leading-fluid-body-2-guided">
+                        Select your package
+                      </h2>
+                      <div className="heading-des">
+                        <p className="text-purple text-base tracking-normal text-fluid-micro-guided leading-fluid-micro-guided">
+                          {`Pick the cleaning package that best fits your needs.`}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="text-purple flex gap-4">
+                    <div className="p-6 bg-light-grey-shade rounded-3xl flex self-start">
+                      <Icon icon="building" size={32} className="fill-purple" />
+                    </div>
+                    <div>
+                      <h2 className="font-bold mb-1 capitalize text-fluid-body-2-guided leading-fluid-body-2-guided">
+                        Enjoy A Spotless Home
+                      </h2>
+                      <div className="heading-des">
+                        <p className="text-purple text-base tracking-normal text-fluid-micro-guided leading-fluid-micro-guided">
+                          {`Sit back and relax while we take care of the cleaning!`}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -104,13 +131,13 @@ const WhyChooseUs = () => {
             <div className="widget-container text-purple">
               <p className={`font-extrabold text-fluid-h1 leading-fluid-h1`}>
                 <span className="open-sans text-transparent stroke-styles relative">
-                  250
+                  800
                 </span>
                 <span className="open-sans ml-3">+</span>
               </p>
               <div className="description">
                 <p className="font-medium text-fluid-body-5 leading-fluid-body-5">
-                  Professional and Experienced staff ready to help you anytime.
+                  Successful projects completed with top-tier results.
                 </p>
               </div>
             </div>
@@ -118,14 +145,13 @@ const WhyChooseUs = () => {
             <div className="widget-container text-purple">
               <p className={`font-extrabold text-fluid-h1 leading-fluid-h1`}>
                 <span className="open-sans text-transparent stroke-styles relative">
-                  14
+                  1K
                 </span>
-                <span className="open-sans ml-3">m</span>
+                <span className="open-sans ml-3">+</span>
               </p>
               <div className="description">
                 <p className="font-medium text-fluid-body-5 leading-fluid-body-5">
-                  Proving all type of cleaning solutions every small and big
-                  businesses
+                  Satisfied clients who trust out expertise.
                 </p>
               </div>
             </div>
@@ -133,13 +159,13 @@ const WhyChooseUs = () => {
             <div className="widget-container text-purple">
               <p className={`font-extrabold text-fluid-h1 leading-fluid-h1`}>
                 <span className="open-sans text-transparent stroke-styles relative">
-                  460
+                  100
                 </span>
-                <span className="open-sans ml-3">m</span>
+                <span className="open-sans ml-3">+</span>
               </p>
               <div className="description">
                 <p className="font-medium text-fluid-body-5 leading-fluid-body-5">
-                  We start with a thorough detail clean throughout your house.
+                  Five-star google reviews from happy customers.
                 </p>
               </div>
             </div>
@@ -147,13 +173,13 @@ const WhyChooseUs = () => {
             <div className="widget-container text-purple">
               <p className={`font-extrabold text-fluid-h1 leading-fluid-h1`}>
                 <span className="open-sans text-transparent stroke-styles relative">
-                  30
+                  24/
                 </span>
-                <span className="open-sans ml-3">k</span>
+                <span className="open-sans ml-3">7</span>
               </p>
               <div className="description">
                 <p className="font-medium text-fluid-body-5 leading-fluid-body-5">
-                  We hold a successful track record of satisfying our customers.
+                  Dedicated support to assist you anytime.
                 </p>
               </div>
             </div>

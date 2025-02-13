@@ -6,6 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Icon from "@/components/Icon/Icon";
 import Image from "next/image";
 import { breakpointsScrollTrigger } from "@/utils/theme";
+import brandLogo from "@/assets/images/brand-logo.png";
 
 // Global flag to track if whether the scroll action was initiated by react-scroll or not
 export const ScrollState = {
@@ -130,7 +131,7 @@ const Navigation = () => {
       <div
         ref={navigationRef}
         className={`bg-white relative flex items-center min-h-24 2xl:rounded-3xl 2xl:mt-8 ${
-          isScrollHappening ? "2xl:bg-white 2xl:bg-opacity-90" : "2xl:mx-8"
+          isScrollHappening ? "2xl:bg-white 2xl:bg-opacity-95" : "2xl:mx-8"
         }`}
         style={{
           boxShadow:
@@ -141,19 +142,15 @@ const Navigation = () => {
           <div className="logo-section">
             <div className="site-branding">
               <h1>
-                <Link href="/" rel="home" aria-label="company name">
-                  {true ? (
-                    <p className="font-bold text-purple">Company Logo</p>
-                  ) : (
-                    <Image
-                      src=""
-                      alt="logo-section"
-                      title="site-title"
-                      height={48}
-                      width={100}
-                      className="logo block max-h-12"
-                    />
-                  )}
+                <Link href="/" rel="home">
+                  <Image
+                    src={brandLogo}
+                    alt="honourable cleaning service"
+                    title="site-title"
+                    className="logo block w-full"
+                    width={120}
+                    height={20}
+                  />
                 </Link>
               </h1>
             </div>
@@ -161,7 +158,7 @@ const Navigation = () => {
           <div
             className={`menu-section fixed min-h-lvh left-0 right-0 top-0 bg-white ${
               isMenuOpen ? "translate-x-0" : "translate-x-full"
-            } transition-transform duration-500 ease-in-out p-6 z-10 2xl:relative 2xl:transform-none 2xl:transition-none 2xl:min-h-[auto] 2xl:p-0 lg:bg-transparent`}
+            } transition-transform duration-500 ease-in-out p-6 z-10 2xl:relative 2xl:transform-none 2xl:transition-none 2xl:min-h-[auto] 2xl:p-0 2xl:bg-transparent`}
           >
             <nav className="nav-section">
               {/* navigation close icon */}
