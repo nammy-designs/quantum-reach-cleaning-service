@@ -53,7 +53,9 @@ const Footer = () => {
                     <div className="nav-link-container">
                       <ul className="list-items-container">
                         <li className="nav-menu-item widget-menu-item">
-                          <span className="time-title">+1 (604) 751 6260</span>
+                          <span className="time-title">
+                            <a href="tel:+16047516260">+1 (604) 751 6260</a>
+                          </span>
                         </li>
                         <li className="nav-menu-item widget-menu-item">
                           <span className="time-title">hello@domain.com</span>

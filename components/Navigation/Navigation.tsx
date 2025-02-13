@@ -13,6 +13,16 @@ export const ScrollState = {
   ReactScrollInitiated: false,
 };
 
+// Static JSX component for book now link
+const bookNowLink = (
+  <a
+    href="tel:+16047516260"
+    className="transition-all duration-300 border border-purple text-fluid-micro-lg leading-fluid-micro-lg uppercase px-4 py-2 font-semibold rounded-md bg-purple text-white hover:text-purple hover:bg-transparent w-full"
+  >
+    book now
+  </a>
+);
+
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isScrollHappening, setIsScrollHappening] = useState<boolean>(false);
@@ -193,7 +203,16 @@ const Navigation = () => {
                   );
                 })}
               </ul>
+
+              <div className="bookNowContainer flex flex-1 justify-start 2xl:hidden py-6">
+                <div className="max-w-64 w-full">{bookNowLink}</div>
+              </div>
             </nav>
+          </div>
+          <div className="bookNowContainer flex-1 justify-end hidden 2xl:flex">
+            <div className="max-w-40 w-full flex flex-1 text-center">
+              {bookNowLink}
+            </div>
           </div>
           <div className="burger-menu-section 2xl:hidden">
             <button
