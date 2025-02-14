@@ -1,6 +1,6 @@
 import { IconTypeProp } from "@/components/Icon/Icon";
-import slide1 from "@/assets/images/slider/slide-1.jpg";
-import slide2 from "@/assets/images/slider/slide-2.jpg";
+import slide1 from "@/assets/images/slider/slide-1.png";
+import slide2 from "@/assets/images/slider/slide-2.png";
 import { StaticImageData } from "next/image";
 
 type Slide = {

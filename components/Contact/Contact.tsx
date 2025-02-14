@@ -23,7 +23,7 @@ const ContactUs = () => {
                   Langley, Mission and Chilliwack.
                 </p>
                 <p className="text-fluid-micro-lg mt-2 leading-fluid-micro-lg font-semibold">
-                  Mobile: +1 (604) 751 6260
+                  Mobile: <a href="tel:+16047516260">+1 (604) 751 6260</a>
                 </p>
                 <p className="text-fluid-micro-lg mt-2 leading-fluid-micro-lg font-semibold">
                   Email: hello@domain.com
