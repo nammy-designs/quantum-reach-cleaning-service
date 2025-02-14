@@ -26,7 +26,7 @@ const ContactUs = () => {
                   Mobile: <a href="tel:+16047516260">+1 (604) 751 6260</a>
                 </p>
                 <p className="text-fluid-micro-lg mt-2 leading-fluid-micro-lg font-semibold">
-                  Email: hello@domain.com
+                  Email: Hello@honourablecleaning.com
                 </p>
               </div>
               <form className="md:col-span-8">

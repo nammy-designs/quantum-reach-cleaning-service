@@ -58,7 +58,9 @@ const Footer = () => {
                           </span>
                         </li>
                         <li className="nav-menu-item widget-menu-item">
-                          <span className="time-title">hello@domain.com</span>
+                          <span className="time-title">
+                            Hello@honourablecleaning.com
+                          </span>
                         </li>
                       </ul>
                     </div>
