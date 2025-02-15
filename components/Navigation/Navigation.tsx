@@ -7,25 +7,24 @@ import Icon from "@/components/Icon/Icon";
 import Image from "next/image";
 import { breakpointsScrollTrigger } from "@/utils/theme";
 import brandLogo from "@/assets/images/brand-logo.png";
+import Modal from "react-modal";
 
 // Global flag to track if whether the scroll action was initiated by react-scroll or not
 export const ScrollState = {
   ReactScrollInitiated: false,
 };
 
-// Static JSX component for book now link
-const bookNowLink = (
-  <a
-    href="tel:+16047516260"
-    className="transition-all duration-300 border border-purple text-fluid-micro-lg leading-fluid-micro-lg uppercase px-4 py-2 font-semibold rounded-md bg-purple text-white hover:text-purple hover:bg-transparent w-full"
-  >
-    book now
-  </a>
-);
-
 const Navigation = () => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isScrollHappening, setIsScrollHappening] = useState<boolean>(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    date: "",
+    time: "",
+  });
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const navigationRef = useRef<HTMLDivElement>(null);
 
   const toggleNavigation = useCallback(() => {
@@ -36,9 +35,50 @@ const Navigation = () => {
     setIsMenuOpen(false);
   }, []);
 
+  const handleModalToggle = useCallback(() => {
+    setIsMenuOpen(false);
+    setIsModalOpen((prev) => !prev);
+  }, []);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    (async () => {
+      try {
+        const res = await fetch("/api/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+        const data = await res.json();
+        if (data.success) {
+          alert(data.message);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+      setFormData({
+        name: "",
+        email: "",
+        date: "",
+        time: "",
+      });
+      setIsModalOpen(false);
+      setIsLoading(false);
+    })();
+  };
+
   /* Effects */
 
   useEffect(() => {
+    Modal.setAppElement(document.body);
+
     const isSmall = window.matchMedia(breakpointsScrollTrigger.sm);
     const isMediumLandscape = window.matchMedia(
       `${breakpointsScrollTrigger.md} and (orientation: landscape)`
@@ -132,6 +172,17 @@ const Navigation = () => {
     };
   }, []);
 
+  // Static JSX component for book now link
+  const bookNowLink = (
+    <button
+      onClick={handleModalToggle}
+      type="button"
+      className="transition-all duration-300 border border-purple text-fluid-micro-lg leading-fluid-micro-lg uppercase px-4 py-2 font-semibold rounded-md bg-purple text-white hover:text-purple hover:bg-transparent w-full"
+    >
+      book now
+    </button>
+  );
+
   return (
     <header
       className={`3xl:container mx-auto transition-all duration-200 ease-in-out ${
@@ -224,6 +275,68 @@ const Navigation = () => {
           </div>
         </div>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={handleModalToggle}
+        contentLabel="book your appointment"
+        className="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto 2xl:w-3/5"
+        overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+      >
+        <div className="modalContent relative">
+          {isLoading && (
+            <div className="absolute flex items-center justify-center left-0 right-0 top-0 bottom-0 ">
+              <div className="flex justify-center items-center h-screen">
+                <div className="w-12 h-12 border-4 border-t-transparent border-purple rounded-full animate-spin"></div>
+              </div>
+            </div>
+          )}
+          <p className="text-fluid-body-3 leading-fluid-body-3 text-purple mb-5 font-semibold">
+            Book your appointment
+          </p>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full bg-transparent placeholder:text-slate-400 text-purple border border-grey-shade rounded-md px-3 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow text-fluid-micro-lg leading-fluid-micro-lg"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full bg-transparent placeholder:text-slate-400 text-purple border border-grey-shade rounded-md px-3 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow text-fluid-micro-lg leading-fluid-micro-lg"
+            />
+            <input
+              type="date"
+              name="date"
+              value={formData.date}
+              onChange={handleChange}
+              required
+              className="w-full bg-transparent placeholder:text-slate-400 text-purple border border-grey-shade rounded-md px-3 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow text-fluid-micro-lg leading-fluid-micro-lg"
+            />
+            <input
+              type="time"
+              name="time"
+              value={formData.time}
+              onChange={handleChange}
+              required
+              className="w-full bg-transparent placeholder:text-slate-400 text-purple border border-grey-shade rounded-md px-3 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow text-fluid-micro-lg leading-fluid-micro-lg"
+            />
+            <button
+              type="submit"
+              className="shadow px-3 py-5 border border-b-purple block capitalize font-semibold rounded-md text-fluid-micro-lg leading-fluid-micro-lg transition-all duration-300 bg-purple text-white hover:text-purple hover:bg-transparent"
+            >
+              Confirm Booking
+            </button>
+          </form>
+        </div>
+      </Modal>
     </header>
   );
 };
