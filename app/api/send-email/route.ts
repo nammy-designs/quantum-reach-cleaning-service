@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     // Email Options
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.SMTP_USER,
+      to: process.env.SMTP_RECEIPT,
       subject: "Appointment booking",
       text: `Name: ${name}\nEmail: ${email}\nDate: ${date}\nTime: ${time}`,
     };
