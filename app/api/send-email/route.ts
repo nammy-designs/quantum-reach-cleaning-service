@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
-import SMTPTransport from "nodemailer/lib/smtp-transport";
+// import nodemailer from "nodemailer";
+// import SMTPTransport from "nodemailer/lib/smtp-transport";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.reset_key);
 ``
-export async function POST(req: Request) {
+export async function POST() {
   try {
-    const { name, email, date, time } = await req.json();
+    // const { name, email, date, time } = await req.json();
 
     resend.emails.send({
       from: 'testing@honourablecleaning.com',
