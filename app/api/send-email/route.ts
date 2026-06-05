@@ -1,34 +1,44 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import SMTPTransport from "nodemailer/lib/smtp-transport";
+import { Resend } from "resend";
 
+const resend = new Resend(process.env.reset_key);
+``
 export async function POST(req: Request) {
   try {
     const { name, email, date, time } = await req.json();
 
+    resend.emails.send({
+      from: 'testing@honourablecleaning.com',
+      to: 'nammydesigns@gmail.com',
+      subject: 'Hello World',
+      html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
+    });
+
     // Configure Nodemailer
-    const transporter = nodemailer.createTransport(
-      new SMTPTransport({
-        host: process.env.SMTP_HOST,
-        port: Number(process.env.SMTP_PORT),
-        secure: process.env.SMTP_PORT === "465",
-        auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASS,
-        },
-      })
-    );
+    // const transporter = nodemailer.createTransport(
+    //   new SMTPTransport({
+    //     host: process.env.SMTP_HOST,
+    //     port: Number(process.env.SMTP_PORT),
+    //     secure: process.env.SMTP_PORT === "465",
+    //     auth: {
+    //       user: process.env.SMTP_USER,
+    //       pass: process.env.SMTP_PASS,
+    //     },
+    //   })
+    // );
 
-    // Email Options
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.SMTP_RECEIPT,
-      subject: "Appointment booking",
-      text: `Name: ${name}\nEmail: ${email}\nDate: ${date}\nTime: ${time}`,
-    };
+    // // Email Options
+    // const mailOptions = {
+    //   from: process.env.EMAIL_USER,
+    //   to: process.env.SMTP_RECEIPT,
+    //   subject: "Appointment booking",
+    //   text: `Name: ${name}\nEmail: ${email}\nDate: ${date}\nTime: ${time}`,
+    // };
 
-    // Send Email
-    await transporter.sendMail(mailOptions);
+    // // Send Email
+    // await transporter.sendMail(mailOptions);
 
     return NextResponse.json({
       success: true,

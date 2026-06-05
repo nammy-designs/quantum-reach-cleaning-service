@@ -16,6 +16,7 @@
     "react-dom": "^18.3.1",
     "react-intersection-observer": "8.33.1",
     "react-modal": "^3.16.3",
+    "resend": "^6.12.4",
     "split-type": "^0.3.4",
     "url-loader": "4.1.1"
   },
