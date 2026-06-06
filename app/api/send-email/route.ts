@@ -3,19 +3,17 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.reset_key);
 
-// 1. Pass the 'request' parameter into your handler function
 export async function POST(request: Request) {
   try {
-    // 2. Uncomment this so you can pull the real form submission data
     const { name, email, date, time } = await request.json();
 
-    // 3. ADD 'await' here so Next.js waits for Resend's API response
     const data = await resend.emails.send({
-      from: "testing@honourablecleaning.com",
-      to: "nammydesigns@gmail.com", // Change this to email if sending to the user
-      subject: "Appointment Booking Confirmation",
+      from: `Acme <${email}@honourablecleaning.com>`,
+      to: "nammydesigns@gmail.com",
+      subject: `New Booking Request from ${name}`,
+      replyTo: email,
       html: `
-        <h3>New Appointment Booked!</h3>
+        <h3>New Appointment Booking Request</h3>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Date:</strong> ${date}</p>
