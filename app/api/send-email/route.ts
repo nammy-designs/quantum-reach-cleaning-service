@@ -9,7 +9,7 @@ export async function POST(request: Request) {
 
     const data = await resend.emails.send({
       from: `Honourable Cleaning Service <booking@honourablecleaning.com>`,
-      to: "nammydesigns@gmail.com",
+      to: "honourablecleaning@gmail.com",
       subject: `New Booking Request from ${name}`,
       replyTo: email,
       html: `
